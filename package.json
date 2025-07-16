@@ -1,0 +1,36 @@
+{
+  "name": "nasa-space-explorer",
+  "version": "1.0.0",
+  "description": "A comprehensive web application showcasing NASA's space data with interactive visualizations",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "nasa",
+    "space",
+    "react",
+    "nodejs",
+    "express",
+    "typescript",
+    "visualization"
+  ],
+  "author": "NASA Space Explorer Team",
+  "license": "MIT",
+  "dependencies": {
+    "recharts": "^3.0.2"
+  }
+}
